@@ -2,7 +2,7 @@
     "name": "extensions.unity.gyroscope.parallax",
     "displayName": "Unity Gyroscope Parallax",
 	"author": { "name": "Ivan Murzak", "url": "https://github.com/IvanMurzak" },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "unity": "2019.2",
     "description": "Unity Parallax based on gyroscope components.",
 	"dependencies": {

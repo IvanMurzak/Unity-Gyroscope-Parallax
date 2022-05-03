@@ -27,7 +27,7 @@ Rotates list of objects using gyroscope.
 ```json
 {
   "dependencies": {
-    "extensions.unity.gyroscope.parallax": "1.0.0",
+    "extensions.unity.gyroscope.parallax": "1.0.1",
   },
   "scopedRegistries": [
     {
@@ -35,6 +35,14 @@ Rotates list of objects using gyroscope.
       "url": "https://registry.npmjs.org",
       "scopes": [
         "extensions.unity"
+      ]
+    },
+    {
+      "name": "NPM",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.cysharp",
+        "com.neuecc"
       ]
     }
   ]
