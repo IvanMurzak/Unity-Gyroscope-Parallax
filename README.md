@@ -36,6 +36,14 @@ Rotates list of objects using gyroscope.
       "scopes": [
         "extensions.unity"
       ]
+    },
+    {
+      "name": "NPM",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.cysharp",
+        "com.neuecc"
+      ]
     }
   ]
 }
