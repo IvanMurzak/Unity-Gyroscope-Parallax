@@ -58,3 +58,18 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+*/AndroidLogcatSettings.asset
+/Assets/StreamingAssets
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# ODIN Ignore the auto-generated AOT compatibility dll.
+/Assets/Plugins/Sirenix/Assemblies/AOT/*
+/Assets/Plugins/Sirenix/Assemblies/AOT**
+
+# ODIN Ignore all unpacked demos.
+/Assets/Plugins/Sirenix/Demos/*
+
+# ODIN plugin
+/Assets/Plugins/Sirenix**
