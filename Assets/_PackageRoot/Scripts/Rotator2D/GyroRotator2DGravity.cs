@@ -25,6 +25,15 @@ namespace UnityGyroscope.Parallax
 
             base.OnDisable();
         }
+        protected override void Subscribe()
+        {
+            Gyroscope.Instance.SubscribeGravity();
+        }
+
+        protected override void Unsubscribe()
+        {
+            Gyroscope.Instance.UnsubscribeGravity();
+        }
 
         private float RoundInRange(float min, float max, float value) => Mathf.Max(min, Mathf.Min(max, value));
 

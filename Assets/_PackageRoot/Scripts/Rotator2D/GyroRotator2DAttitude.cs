@@ -34,6 +34,15 @@ namespace UnityGyroscope.Parallax
 
             base.OnDisable();
         }
+        protected override void Subscribe()
+        {
+            Gyroscope.Instance.SubscribeAttitude();
+        }
+
+        protected override void Unsubscribe()
+        {
+            Gyroscope.Instance.UnsubscribeAttitude();
+        }
 
         private float RoundInRange(float min, float max, float value) => Mathf.Max(min, Mathf.Min(max, value));
         private float SmoothPower(float min, float max, float value) => 1f - (Mathf.Min(Mathf.Abs(value - min), Mathf.Abs(value - max)) / ((max - min) / 2f));

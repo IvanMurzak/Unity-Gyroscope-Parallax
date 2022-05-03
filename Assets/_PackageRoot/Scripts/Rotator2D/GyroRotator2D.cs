@@ -22,19 +22,21 @@ namespace UnityGyroscope.Parallax
             foreach (var target in targets)
                 target.OriginalLocalRotation = target.target.localRotation;
 
-            Gyroscope.Instance.Subscribe();
+            Subscribe();
         }
         protected virtual void OnDisable()
         {
             if (!Gyroscope.Instance.HasGyroscope)
                 return;
 
-            Gyroscope.Instance.Unsubscribe();
+            Unsubscribe();
 
             foreach (var target in targets)
                 target.target.localRotation = target.OriginalLocalRotation;
         }
 
+        protected abstract void Subscribe();
+        protected abstract void Unsubscribe();
         protected abstract void OnUpdatePrepeare();
         protected abstract void ApplyTransform(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier, float toX, float toY, float toZ);
         protected abstract float CalcToX(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier);
