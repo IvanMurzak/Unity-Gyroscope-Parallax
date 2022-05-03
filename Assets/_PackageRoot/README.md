@@ -3,6 +3,11 @@
 
 Unity Parallax based on gyroscope components. Supported fake gyroscope for simulation in Unity Editor.
 
+### Features
+- ✔️ support legacy Input System
+- ✔️ support new Input System
+- ✔️ ability to simulate gyroscope in Unity Editor
+
 ![Unity_hJmku5zeme](https://user-images.githubusercontent.com/9135028/166466994-ae626370-a9c1-49f0-a00f-75fc93ce601a.gif)
 
 # GyroMover2D
@@ -27,7 +32,7 @@ Rotates list of objects using gyroscope.
 ```json
 {
   "dependencies": {
-    "extensions.unity.gyroscope.parallax": "1.0.1",
+    "extensions.unity.gyroscope.parallax": "1.2.0",
   },
   "scopedRegistries": [
     {
