@@ -32,7 +32,7 @@ Rotates list of objects using gyroscope.
 ```json
 {
   "dependencies": {
-    "extensions.unity.gyroscope.parallax": "1.1.2",
+    "extensions.unity.gyroscope.parallax": "1.2.0",
   },
   "scopedRegistries": [
     {
