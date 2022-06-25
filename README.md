@@ -7,6 +7,8 @@ Unity Parallax based on gyroscope components. Supported fake gyroscope for simul
 - ✔️ support legacy Input System
 - ✔️ support new Input System
 - ✔️ ability to simulate gyroscope in Unity Editor
+- ✔️ move/rotate objects based on gyroscope
+- ✔️ ability to add custom controllers
 
 ![Unity_hJmku5zeme](https://user-images.githubusercontent.com/9135028/166466994-ae626370-a9c1-49f0-a00f-75fc93ce601a.gif)
 
