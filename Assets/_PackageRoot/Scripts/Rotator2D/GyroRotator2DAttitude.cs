@@ -57,7 +57,7 @@ namespace UnityGyroscope.Parallax
             (
                 target.target.localRotation,
                 Quaternion.Euler(toX, toY, toZ),
-                Time.deltaTime * target.speed
+                Time.deltaTime * target.speed * speedMultiplier
             );
         }
 

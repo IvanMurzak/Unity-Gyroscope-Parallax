@@ -9,6 +9,7 @@ namespace UnityGyroscope.Parallax
 { 
     public abstract class GyroRotator2D : MonoBehaviour
     {
+                                    public          float               speedMultiplier = 1;
                                     public          Vector2             offsetMultiplier = Vector2.one;
         [SerializeField, Required]                  List<GyroTarget>    targets = new List<GyroTarget>();
 

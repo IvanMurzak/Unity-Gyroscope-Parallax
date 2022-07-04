@@ -152,10 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539ef21bcb7d8894fb48cfaa403fcac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedMultiplier: 10
   offsetMultiplier: {x: 1, y: 1}
   targets:
   - target: {fileID: 1275941634}
-    speed: 10
+    speed: 1
     maxOffset: {x: 1.5, y: 20}
     axes: 4
 --- !u!4 &201139855
@@ -170,7 +171,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342336930
 GameObject:
@@ -336,6 +337,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &556102443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556102445}
+  - component: {fileID: 556102444}
+  - component: {fileID: 556102446}
+  m_Layer: 0
+  m_Name: Setup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &556102444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556102443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f248c3e318290944a6b4e5810d22c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &556102445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556102443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &556102446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556102443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ddeee24e8b0244bb5cb166d5cc88ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  samplingFrequency: 32
+  useFakeGyroscopeInEditor: 1
+  fakeGyroscopeSettings:
+    hasGyroscope: 1
+    attitude: {x: 0, y: 0, z: 0}
+    gravity: {x: 0, y: 0, z: 1}
 --- !u!1 &575556457
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +794,7 @@ Transform:
   - {fileID: 575556458}
   - {fileID: 342336931}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792325250
 GameObject:
@@ -844,26 +907,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3150bb2bd3a52944acc461ffa28af24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedMultiplier: 10
   offsetMultiplier: {x: 1, y: 1}
   targets:
   - target: {fileID: 2022894514}
-    speed: 10
-    maxOffset: {x: 2, y: 1}
+    speed: 1
+    maxOffset: {x: 2, y: 2}
   - target: {fileID: 393434817}
-    speed: 10
-    maxOffset: {x: 1, y: 0.5}
+    speed: 1
+    maxOffset: {x: 1, y: 1}
   - target: {fileID: 1275941634}
-    speed: 10
-    maxOffset: {x: 0.25, y: 0.125}
+    speed: 1
+    maxOffset: {x: 0.25, y: 0.25}
   - target: {fileID: 575556458}
-    speed: 10
-    maxOffset: {x: 0.3, y: 0.15}
+    speed: 1
+    maxOffset: {x: 0.3, y: 0.3}
   - target: {fileID: 342336931}
-    speed: 10
-    maxOffset: {x: 0.4, y: 0.2}
+    speed: 1
+    maxOffset: {x: 0.4, y: 0.4}
   - target: {fileID: 629033410}
-    speed: 10
-    maxOffset: {x: 0.5, y: 0.25}
+    speed: 1
+    maxOffset: {x: 0.5, y: 0.5}
 --- !u!4 &1883056389
 Transform:
   m_ObjectHideFlags: 0
@@ -876,7 +940,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022894513
 GameObject:

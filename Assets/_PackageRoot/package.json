@@ -7,7 +7,7 @@
     "description": "Unity Parallax based on gyroscope components.",
 	"dependencies": {
 		"com.cysharp.unitask": "2.2.5",
-		"extensions.unity.gyroscope.manager": "1.2.1"
+		"extensions.unity.gyroscope.manager": "1.2.6"
     },
     "scopedRegistries": [
       {

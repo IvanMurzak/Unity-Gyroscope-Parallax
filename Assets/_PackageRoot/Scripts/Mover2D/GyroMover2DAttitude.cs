@@ -76,7 +76,7 @@ namespace UnityGyroscope.Parallax
                     ),
                     target.OriginalLocalPosition.z
                 ),
-                Time.deltaTime * target.speed
+                Time.deltaTime * target.speed * speedMultiplier
             );
         }
     }

@@ -41,9 +41,6 @@ namespace UnityGyroscope.Parallax
         }
 	    protected override void ApplyTransform(GyroTarget target, Vector2 offsetMultiplier)
 	    {
-            var maxOffsetX = target.maxOffset.x;
-            var maxOffsetY = target.maxOffset.y;
-
             target.target.localPosition = Vector3.Lerp
             (
                 target.target.localPosition,
@@ -51,19 +48,19 @@ namespace UnityGyroscope.Parallax
                 (
                     target.OriginalLocalPosition.x + Mathf.Lerp
                     (
-                        -maxOffsetX * offsetMultiplier.x,
-                        maxOffsetX * offsetMultiplier.x,
+                        -target.maxOffset.x * offsetMultiplier.x,
+                        target.maxOffset.x * offsetMultiplier.x,
                         gravity.x + 0.5f
                     ),
                     target.OriginalLocalPosition.y + Mathf.Lerp
                     (
-                        -maxOffsetY * offsetMultiplier.y,
-                        maxOffsetY * offsetMultiplier.y,
+                        -target.maxOffset.y * offsetMultiplier.y,
+                        target.maxOffset.y * offsetMultiplier.y,
                         gravity.y + 0.5f
                     ),
                     target.OriginalLocalPosition.z
                 ),
-                Time.deltaTime * target.speed
+                Time.deltaTime * target.speed * speedMultiplier
             );
         }
     }
