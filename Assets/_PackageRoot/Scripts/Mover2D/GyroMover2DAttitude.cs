@@ -52,7 +52,7 @@ namespace UnityGyroscope.Parallax
 	    {
             gyroEuler = Correct(Gyroscope.Instance.Attitude.Value) - originGyroEulerAngles;
         }
-	    protected override void ApplyTransform(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier)
+	    protected override void ApplyTransform(GyroTarget target, Vector2 offsetMultiplier)
 	    {
             var maxOffsetX = Mathf.Abs(target.maxOffset.x);
             var maxOffsetY = Mathf.Abs(target.maxOffset.y);
@@ -66,13 +66,13 @@ namespace UnityGyroscope.Parallax
                     (
                         -maxOffsetX * offsetMultiplier.x,
                         maxOffsetX * offsetMultiplier.x,
-                        gyroEuler.x * target.power.x * powerMultiplier.x
+                        gyroEuler.x
                     ),
                     target.OriginalLocalPosition.y + RoundInRange
                     (
                         -maxOffsetY * offsetMultiplier.y,
                         maxOffsetY * offsetMultiplier.y,
-                        gyroEuler.y * target.power.y * powerMultiplier.y
+                        gyroEuler.y
                     ),
                     target.OriginalLocalPosition.z
                 ),

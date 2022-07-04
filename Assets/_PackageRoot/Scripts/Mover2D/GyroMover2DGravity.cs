@@ -35,33 +35,31 @@ namespace UnityGyroscope.Parallax
             Gyroscope.Instance.UnsubscribeGravity();
         }
 
-        private float RoundInRange(float min, float max, float value) => Mathf.Max(min, Mathf.Min(max, value));
-
 	    protected override void OnUpdatePrepeare()
 	    {
-            gravity = Correct(Gyroscope.Instance.Gravity.Value) - originGravity;
+            gravity = (Correct(Gyroscope.Instance.Gravity.Value) - originGravity).normalized;
         }
-	    protected override void ApplyTransform(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier)
+	    protected override void ApplyTransform(GyroTarget target, Vector2 offsetMultiplier)
 	    {
-            var maxOffsetX = Mathf.Abs(target.maxOffset.x);
-            var maxOffsetY = Mathf.Abs(target.maxOffset.y);
+            var maxOffsetX = target.maxOffset.x;
+            var maxOffsetY = target.maxOffset.y;
 
             target.target.localPosition = Vector3.Lerp
             (
                 target.target.localPosition,
                 new Vector3
                 (
-                    target.OriginalLocalPosition.x + RoundInRange
+                    target.OriginalLocalPosition.x + Mathf.Lerp
                     (
                         -maxOffsetX * offsetMultiplier.x,
                         maxOffsetX * offsetMultiplier.x,
-                        gravity.x * target.power.x * powerMultiplier.x
+                        gravity.x + 0.5f
                     ),
-                    target.OriginalLocalPosition.y + RoundInRange
+                    target.OriginalLocalPosition.y + Mathf.Lerp
                     (
                         -maxOffsetY * offsetMultiplier.y,
                         maxOffsetY * offsetMultiplier.y,
-                        gravity.y * target.power.y * powerMultiplier.y
+                        gravity.y + 0.5f
                     ),
                     target.OriginalLocalPosition.z
                 ),

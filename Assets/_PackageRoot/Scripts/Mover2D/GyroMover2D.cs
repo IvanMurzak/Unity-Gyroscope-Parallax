@@ -9,7 +9,6 @@ namespace UnityGyroscope.Parallax
 { 
     public abstract class GyroMover2D : MonoBehaviour
     {
-                                    public          Vector2             powerMultiplier = Vector2.one;
                                     public          Vector2             offsetMultiplier = Vector2.one;
         [SerializeField, Required]                  List<GyroTarget>    targets = new List<GyroTarget>();
 
@@ -38,7 +37,7 @@ namespace UnityGyroscope.Parallax
         protected abstract void Subscribe();
         protected abstract void Unsubscribe();
         protected abstract void OnUpdatePrepeare();
-        protected abstract void ApplyTransform(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier);
+        protected abstract void ApplyTransform(GyroTarget target, Vector2 offsetMultiplier);
 
         protected virtual void Update()
         {
@@ -50,7 +49,7 @@ namespace UnityGyroscope.Parallax
             foreach (var target in targets)
             {
                 if (target != null)
-                    ApplyTransform(target, powerMultiplier, offsetMultiplier);
+                    ApplyTransform(target, offsetMultiplier);
             }
         }
 
@@ -59,7 +58,6 @@ namespace UnityGyroscope.Parallax
 	    {
             public Transform    target;
             public float        speed       = 1;
-            public Vector2      power       = new Vector2(1, 1);
             public Vector2      maxOffset   = new Vector2(100, 100);
 
             public Vector3      OriginalLocalPosition { get; set; }

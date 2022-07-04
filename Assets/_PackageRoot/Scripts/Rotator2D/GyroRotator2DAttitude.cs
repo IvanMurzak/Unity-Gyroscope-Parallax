@@ -51,7 +51,7 @@ namespace UnityGyroscope.Parallax
 	    {
             gyroEuler = Correct(Gyroscope.Instance.Attitude.Value) - originGyroEulerAngles;
         }
-	    protected override void ApplyTransform(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier, float toX, float toY, float toZ)
+	    protected override void ApplyTransform(GyroTarget target, Vector2 offsetMultiplier, float toX, float toY, float toZ)
 	    {
             target.target.localRotation = Quaternion.Lerp
             (
@@ -61,29 +61,29 @@ namespace UnityGyroscope.Parallax
             );
         }
 
-        protected override float CalcToX(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier)
+        protected override float CalcToX(GyroTarget target, Vector2 offsetMultiplier)
         {
             var maxOffsetX = Mathf.Abs(target.maxOffset.x);
             return target.OriginalLocalRotation.x + RoundInRange
             (
                 -maxOffsetX * offsetMultiplier.x,
                 maxOffsetX * offsetMultiplier.x,
-                gyroEuler.x * target.power.x * powerMultiplier.x
+                gyroEuler.x
             );
         }
 
-        protected override float CalcToY(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier)
+        protected override float CalcToY(GyroTarget target, Vector2 offsetMultiplier)
         {
             var maxOffsetY = Mathf.Abs(target.maxOffset.y);
             return target.OriginalLocalRotation.y + RoundInRange
             (
                 -maxOffsetY * offsetMultiplier.y,
                 maxOffsetY * offsetMultiplier.y,
-                gyroEuler.y * target.power.y * powerMultiplier.y
+                gyroEuler.y
             );
         }
 
-        protected override float CalcToZ(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier)
+        protected override float CalcToZ(GyroTarget target, Vector2 offsetMultiplier)
         {
             return target.OriginalLocalRotation.z;
         }

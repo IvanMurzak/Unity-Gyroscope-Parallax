@@ -35,13 +35,11 @@ namespace UnityGyroscope.Parallax
             Gyroscope.Instance.UnsubscribeGravity();
         }
 
-        private float RoundInRange(float min, float max, float value) => Mathf.Max(min, Mathf.Min(max, value));
-
 	    protected override void OnUpdatePrepeare()
 	    {
-            gravity = Correct(Gyroscope.Instance.Gravity.Value) - originGravity;
+            gravity = (Correct(Gyroscope.Instance.Gravity.Value) - originGravity).normalized;
         }
-        protected override void ApplyTransform(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier, float toX, float toY, float toZ)
+        protected override void ApplyTransform(GyroTarget target, Vector2 offsetMultiplier, float toX, float toY, float toZ)
         {
             target.target.localRotation = Quaternion.Lerp
             (
@@ -51,29 +49,27 @@ namespace UnityGyroscope.Parallax
             );
         }
 
-        protected override float CalcToX(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier)
+        protected override float CalcToX(GyroTarget target, Vector2 offsetMultiplier)
         {
-            var maxOffsetX = Mathf.Abs(target.maxOffset.x);
-            return target.OriginalLocalRotation.x + RoundInRange
+            return target.OriginalLocalRotation.x + Mathf.Lerp
             (
-                -maxOffsetX * offsetMultiplier.x,
-                maxOffsetX * offsetMultiplier.x,
-                gravity.x * target.power.x * powerMultiplier.x
+                -target.maxOffset.x * offsetMultiplier.x,
+                target.maxOffset.x * offsetMultiplier.x,
+                gravity.x + 0.5f
             );
         }
 
-        protected override float CalcToY(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier)
+        protected override float CalcToY(GyroTarget target, Vector2 offsetMultiplier)
         {
-            var maxOffsetY = Mathf.Abs(target.maxOffset.y);
-            return target.OriginalLocalRotation.y + RoundInRange
+            return target.OriginalLocalRotation.y + Mathf.Lerp
             (
-                -maxOffsetY * offsetMultiplier.y,
-                maxOffsetY * offsetMultiplier.y,
-                gravity.y * target.power.y * powerMultiplier.y
+                -target.maxOffset.y * offsetMultiplier.y,
+                target.maxOffset.y * offsetMultiplier.y,
+                gravity.y + 0.5f
             );
         }
 
-        protected override float CalcToZ(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier)
+        protected override float CalcToZ(GyroTarget target, Vector2 offsetMultiplier)
         {
             return target.OriginalLocalRotation.z;
         }

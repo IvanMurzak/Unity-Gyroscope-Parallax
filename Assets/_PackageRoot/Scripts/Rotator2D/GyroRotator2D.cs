@@ -9,7 +9,6 @@ namespace UnityGyroscope.Parallax
 { 
     public abstract class GyroRotator2D : MonoBehaviour
     {
-                                    public          Vector2             powerMultiplier = Vector2.one;
                                     public          Vector2             offsetMultiplier = Vector2.one;
         [SerializeField, Required]                  List<GyroTarget>    targets = new List<GyroTarget>();
 
@@ -38,10 +37,10 @@ namespace UnityGyroscope.Parallax
         protected abstract void Subscribe();
         protected abstract void Unsubscribe();
         protected abstract void OnUpdatePrepeare();
-        protected abstract void ApplyTransform(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier, float toX, float toY, float toZ);
-        protected abstract float CalcToX(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier);
-        protected abstract float CalcToY(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier);
-        protected abstract float CalcToZ(GyroTarget target, Vector2 powerMultiplier, Vector2 offsetMultiplier);
+        protected abstract void ApplyTransform(GyroTarget target, Vector2 offsetMultiplier, float toX, float toY, float toZ);
+        protected abstract float CalcToX(GyroTarget target, Vector2 offsetMultiplier);
+        protected abstract float CalcToY(GyroTarget target, Vector2 offsetMultiplier);
+        protected abstract float CalcToZ(GyroTarget target, Vector2 offsetMultiplier);
 
         protected virtual void Update()
         {
@@ -54,16 +53,16 @@ namespace UnityGyroscope.Parallax
             {
                 if (target != null)
                 {
-                    var toX = CalcToX(target, powerMultiplier, offsetMultiplier);
-                    var toY = CalcToY(target, powerMultiplier, offsetMultiplier);
-                    var toZ = CalcToZ(target, powerMultiplier, offsetMultiplier);
+                    var toX = CalcToX(target, offsetMultiplier);
+                    var toY = CalcToY(target, offsetMultiplier);
+                    var toZ = CalcToZ(target, offsetMultiplier);
 
-                    if (target.axes == Axes.XY) ApplyTransform(target, powerMultiplier, offsetMultiplier, toX, toY, toZ);
-                    if (target.axes == Axes.XZ) ApplyTransform(target, powerMultiplier, offsetMultiplier, toX, toZ, toY);
-                    if (target.axes == Axes.YZ) ApplyTransform(target, powerMultiplier, offsetMultiplier, toZ, toX, toY);
-                    if (target.axes == Axes.YX) ApplyTransform(target, powerMultiplier, offsetMultiplier, toY, toX, toZ);
-                    if (target.axes == Axes.ZX) ApplyTransform(target, powerMultiplier, offsetMultiplier, toY, toZ, toX);
-                    if (target.axes == Axes.ZY) ApplyTransform(target, powerMultiplier, offsetMultiplier, toZ, toY, toX);
+                    if (target.axes == Axes.XY) ApplyTransform(target, offsetMultiplier, toX, toY, toZ);
+                    if (target.axes == Axes.XZ) ApplyTransform(target, offsetMultiplier, toX, toZ, toY);
+                    if (target.axes == Axes.YZ) ApplyTransform(target, offsetMultiplier, toZ, toX, toY);
+                    if (target.axes == Axes.YX) ApplyTransform(target, offsetMultiplier, toY, toX, toZ);
+                    if (target.axes == Axes.ZX) ApplyTransform(target, offsetMultiplier, toY, toZ, toX);
+                    if (target.axes == Axes.ZY) ApplyTransform(target, offsetMultiplier, toZ, toY, toX);
                 }
             }
         }
@@ -73,7 +72,6 @@ namespace UnityGyroscope.Parallax
 	    {
             public Transform    target;
             public float        speed       = 1;
-            public Vector2      power       = new Vector2(1, 1);
             public Vector2      maxOffset   = new Vector2(100, 100);
             public Axes         axes        = Axes.XY;
 
