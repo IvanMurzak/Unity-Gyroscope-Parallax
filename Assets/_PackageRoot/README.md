@@ -10,7 +10,7 @@ Unity Parallax based on gyroscope components. Supported fake gyroscope for simul
 - ✔️ move/rotate objects based on gyroscope
 - ✔️ ability to add custom controllers
 
-![Unity_hJmku5zeme](https://user-images.githubusercontent.com/9135028/166466994-ae626370-a9c1-49f0-a00f-75fc93ce601a.gif)
+![unity-gyroscope-parallax-small](https://user-images.githubusercontent.com/9135028/177197269-a11dd87c-3f6b-400d-bf91-01a9b051cb1b.gif)
 
 # GyroMover2D
 Moves list of objects using gyroscope.
@@ -35,7 +35,7 @@ Rotates list of objects using gyroscope.
 ```json
 {
   "dependencies": {
-    "extensions.unity.gyroscope.parallax": "1.3.1",
+    "extensions.unity.gyroscope.parallax": "1.4.0",
   },
   "scopedRegistries": [
     {
