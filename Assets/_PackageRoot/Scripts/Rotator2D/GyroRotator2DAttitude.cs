@@ -68,7 +68,7 @@ namespace UnityGyroscope.Parallax
             (
                 -maxOffsetX * offsetMultiplier.x,
                 maxOffsetX * offsetMultiplier.x,
-                gyroEuler.x
+                target.inverseX ? -gyroEuler.x : gyroEuler.x
             );
         }
 
@@ -79,7 +79,7 @@ namespace UnityGyroscope.Parallax
             (
                 -maxOffsetY * offsetMultiplier.y,
                 maxOffsetY * offsetMultiplier.y,
-                gyroEuler.y
+                target.inverseY ? -gyroEuler.y : gyroEuler.y
             );
         }
 

@@ -72,6 +72,8 @@ namespace UnityGyroscope.Parallax
         public class GyroTarget
 	    {
             public Transform    target;
+            public bool         inverseX    = true; 
+            public bool         inverseY    = true;
             public float        speed       = 1;
             public Vector2      maxOffset   = new Vector2(100, 100);
             public Axes         axes        = Axes.XY;

@@ -66,13 +66,13 @@ namespace UnityGyroscope.Parallax
                     (
                         -maxOffsetX * offsetMultiplier.x,
                         maxOffsetX * offsetMultiplier.x,
-                        gyroEuler.x
+                        target.inverseX ? -gyroEuler.x : gyroEuler.x
                     ),
                     target.OriginalLocalPosition.y + RoundInRange
                     (
                         -maxOffsetY * offsetMultiplier.y,
                         maxOffsetY * offsetMultiplier.y,
-                        gyroEuler.y
+                        target.inverseY ? -gyroEuler.y : gyroEuler.y
                     ),
                     target.OriginalLocalPosition.z
                 ),
