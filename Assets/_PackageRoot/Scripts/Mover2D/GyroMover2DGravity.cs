@@ -50,13 +50,13 @@ namespace UnityGyroscope.Parallax
                     (
                         -target.maxOffset.x * offsetMultiplier.x,
                         target.maxOffset.x * offsetMultiplier.x,
-                        gravity.x + 0.5f
+                        (target.inverseX ? -gravity.x : gravity.x) + 0.5f
                     ),
                     target.OriginalLocalPosition.y + Mathf.Lerp
                     (
                         -target.maxOffset.y * offsetMultiplier.y,
                         target.maxOffset.y * offsetMultiplier.y,
-                        gravity.y + 0.5f
+                        (target.inverseY ? -gravity.y : gravity.y) + 0.5f
                     ),
                     target.OriginalLocalPosition.z
                 ),
