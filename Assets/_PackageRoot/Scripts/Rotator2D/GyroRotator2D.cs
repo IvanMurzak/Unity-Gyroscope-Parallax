@@ -1,9 +1,11 @@
 using Cysharp.Threading.Tasks;
-using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Gyroscope = UnityGyroscope.Manager.Gyroscope;
+#if ODIN_INSPECTOR
+using Sirenix.OdinInspector;
+#endif
 
 namespace UnityGyroscope.Parallax
 { 
@@ -11,7 +13,10 @@ namespace UnityGyroscope.Parallax
     {
                                     public          float               speedMultiplier = 1;
                                     public          Vector2             offsetMultiplier = Vector2.one;
-        [SerializeField, Required]                  List<GyroTarget>    targets = new List<GyroTarget>();
+#if ODIN_INSPECTOR
+        [Required]
+#endif
+        [SerializeField]                            List<GyroTarget>    targets = new List<GyroTarget>();
 
 
         protected virtual async UniTask OnEnable()
