@@ -1,7 +1,7 @@
 # Unity-Gyroscope-Parallax
 ![npm](https://img.shields.io/npm/v/extensions.unity.gyroscope.parallax) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Gyroscope-Parallax)
 
-Unity Parallax based on gyroscope components. Supported fake gyroscope for simulation in Unity Editor.
+Unity Parallax based on gyroscope components. Supported fake gyroscope for simulation in Unity Editor. Alternative version to [Unity-Mouse-Parallax](https://github.com/IvanMurzak/Unity-Mouse-Parallax).
 
 ### Features
 - ✔️ support legacy Input System
