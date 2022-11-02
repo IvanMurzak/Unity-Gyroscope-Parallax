@@ -63,7 +63,7 @@ Rotates list of objects using gyroscope.
 ```
 
 # How to use
-- add needed `Gyro...` component to any GameObject
+- add needed `Gyro...2D` component to any GameObject
 - link Targets to list of targets
 - press 'Play' button in Unity Editor
 - find `Fake Gyroscope Manager` in `DonDestroyOnLoad` scene (appears in Play Mode)
