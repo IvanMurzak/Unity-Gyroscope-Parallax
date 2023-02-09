@@ -45,7 +45,7 @@ Rotates list of objects using gyroscope.
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
       "scopes": [
-        "extensions.unity.gyroscope.parallax",
+        "extensions.unity",
         "com.cysharp",
         "com.neuecc"
       ]
