@@ -1,0 +1,40 @@
+{
+  "name": "extensions.unity.gyroscope.parallax",
+  "displayName": "Unity Gyroscope Parallax",
+  "author": {
+    "name": "Ivan Murzak",
+    "email": "ivan.d.murzak@gmail.com",
+    "url": "https://github.com/IvanMurzak"
+  },
+  "version": "2.0.0",
+  "unity": "2019.2",
+  "description": "Unity Parallax based on gyroscope components.",
+  "keywords": [
+    "parallax",
+    "animation",
+    "movement",
+    "gyroscope",
+    "motion",
+    "sensor",
+    "device orientation",
+    "rotation",
+    "2D",
+    "3D"
+  ],
+  "homepage": "https://github.com/IvanMurzak/Unity-Gyroscope-Parallax",
+  "bugs": {
+    "url": "https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/issues"
+  },
+  "dependencies": {
+    "extensions.unity.gyroscope.manager": "1.2.6"
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "extensions.unity.gyroscope.manager"
+      ]
+    }
+  ]
+}
