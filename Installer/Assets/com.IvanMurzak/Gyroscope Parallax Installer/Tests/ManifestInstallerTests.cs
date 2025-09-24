@@ -17,8 +17,8 @@ namespace com.IvanMurzak.Unity.Gyroscope.Parallax.Installer.Tests
     {
         const string PackageIdTag = "PACKAGE_ID";
         const string PackageVersionTag = "PACKAGE_VERSION";
-        const string FilesRoot = "Assets/com.IvanMurzak/AI Game Dev Installer/Tests/Files";
-        const string FilesCopyRoot = "Temp/com.IvanMurzak/AI Game Dev Installer/Tests/Files";
+        const string FilesRoot = "Assets/com.IvanMurzak/Gyroscope Parallax Installer/Tests/Files";
+        const string FilesCopyRoot = "Temp/com.IvanMurzak/Gyroscope Parallax Installer/Tests/Files";
         static string CorrectManifestPath => $"{FilesRoot}/Correct/correct_manifest.json";
 
         [SetUp]

@@ -2,8 +2,7 @@
     "name": "Extensions.Unity.Gyroscope.Parallax.Tests.Runtime",
     "rootNamespace": "",
     "references": [
-        "UnityEngine.TestRunner",
-        "Extensions.Unity.ImageLoader.Tests.Editor"
+        "UnityEngine.TestRunner"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
