@@ -7,7 +7,7 @@
 │  See the LICENSE file in the project root for more information.               │
 └───────────────────────────────────────────────────────────────────────────────┘
 */
-#nullable enable
+
 using System.IO;
 using System.Linq;
 using com.IvanMurzak.Unity.Gyroscope.Parallax.Installer.SimpleJSON;
@@ -69,7 +69,7 @@ namespace com.IvanMurzak.Unity.Gyroscope.Parallax.Installer
             }
 
             // --- Add OpenUPM registry if needed
-            var openUpmRegistry = scopedRegistries!.Linq
+            var openUpmRegistry = scopedRegistries.Linq
                 .Select(kvp => kvp.Value)
                 .Where(r => r.Linq
                     .Any(p => p.Key == Name && p.Value == RegistryName))
@@ -95,7 +95,7 @@ namespace com.IvanMurzak.Unity.Gyroscope.Parallax.Installer
             }
             foreach (var packageId in PackageIds)
             {
-                var existingScope = scopes!.Linq
+                var existingScope = scopes.Linq
                     .Select(kvp => kvp.Value)
                     .Where(value => value == packageId)
                     .FirstOrDefault();
