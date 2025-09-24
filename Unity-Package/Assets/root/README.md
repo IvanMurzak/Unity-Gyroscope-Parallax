@@ -21,6 +21,16 @@ Unity Parallax based on gyroscope components. Supported fake gyroscope for simul
 
 ![unity-gyroscope-parallax-small](https://user-images.githubusercontent.com/9135028/177197269-a11dd87c-3f6b-400d-bf91-01a9b051cb1b.gif)
 
+### Stability status
+
+| Unity Version | Editor test | Player test | Build test |
+|---------------|-------------|-------------|------------|
+| 2019.2.1f1    | ![2019.2.1f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2019-2-1f1-editmode) | ![2019.2.1f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2019-2-1f1-playmode) | ![2019.2.1f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2019-2-1f1-standalone) |
+| 2020.3.48f1   | ![2020.3.48f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2020-3-48f1-editmode) | ![2020.3.48f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2020-3-48f1-playmode) | ![2020.3.48f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2020-3-48f1-standalone) |
+| 2021.3.45f1   | ![2021.3.45f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2021-3-45f1-editmode) | ![2021.3.45f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2021-3-45f1-playmode) | ![2021.3.45f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2021-3-45f1-standalone) |
+| 2022.3.62f1   | ![2022.3.62f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2022-3-62f1-editmode) | ![2022.3.62f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2022-3-62f1-playmode) | ![2022.3.62f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-2022-3-62f1-standalone) |
+| 6000.0.58f1   | ![6000.0.58f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-6000-0-58f1-editmode) | ![6000.0.58f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-6000-0-58f1-playmode) | ![6000.0.58f1](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/workflows/release/badge.svg?job=test-unity-6000-0-58f1-standalone) |
+
 ---
 
 ## Installation
