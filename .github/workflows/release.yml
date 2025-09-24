@@ -23,7 +23,7 @@ jobs:
           echo "InstallerProjectPath=./Installer" >> $GITHUB_OUTPUT
           echo "InstallerFileName=Gyroscope-Parallax-Installer" >> $GITHUB_OUTPUT
           echo "InstallerExportMethod=com.IvanMurzak.Unity.Gyroscope.Parallax.Installer.PackageExporter.ExportPackage" >> $GITHUB_OUTPUT
-          echo "InstallerUnityVersion=2020.3.36f1" >> $GITHUB_OUTPUT
+          echo "InstallerUnityVersion=2021.3.45f1" >> $GITHUB_OUTPUT
 
   check-version-tag:
     needs: setup
