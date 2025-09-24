@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/github/license/IvanMurzak/Unity-Gyroscope-Parallax?label=License)](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/blob/main/LICENSE)
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 
-![Unity Parallax Effect](https://github.com/IvanMurza/Unity-Gyroscope-Parallax/blob/main/docs/img/unity-chan-parallax.gif)
+![Unity Parallax Effect](https://github.com/IvanMurza/Unity-Gyroscope-Parallax/raw/main/docs/img/unity-chan-parallax.gif)
 
 Unity Parallax based on gyroscope components. Supported fake gyroscope for simulation in Unity Editor. Alternative version to [Unity-Mouse-Parallax](https://github.com/IvanMurzak/Unity-Mouse-Parallax).
 
