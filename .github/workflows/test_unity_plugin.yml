@@ -68,13 +68,23 @@ jobs:
           key: Library-${{ inputs.unityVersion }}-${{ matrix.os }}
 
       # --------------------------------------------------------------------- #
+      - name: Skip Unity 2019 on Windows
+        if: ${{ startsWith(inputs.unityVersion, '2019.') && matrix.os == 'windows' }}
+        run: |
+          echo "::notice::Unity 2019 on Windows doesn't support Docker test running - skipping tests"
+          exit 0
+        shell: bash
+
+      # --------------------------------------------------------------------- #
       - name: Generate custom image name
+        if: ${{ !(startsWith(inputs.unityVersion, '2019.') && matrix.os == 'windows') }}
         id: custom_image
         run: |
           echo "image=unityci/editor:${{ matrix.os }}-${{ inputs.unityVersion }}-base-3" >> $GITHUB_OUTPUT
         shell: bash
 
       - uses: game-ci/unity-test-runner@v4
+        if: ${{ !(startsWith(inputs.unityVersion, '2019.') && matrix.os == 'windows') }}
         id: tests
         env:
           UNITY_LICENSE:  ${{ secrets.UNITY_LICENSE }}
@@ -92,7 +102,7 @@ jobs:
 
       # --------------------------------------------------------------------- #
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: ${{ always() && !(startsWith(inputs.unityVersion, '2019.') && matrix.os == 'windows') }}
         with:
           name: Test results for ${{ inputs.unityVersion }} ${{ inputs.testMode }} on ${{ matrix.os }}
           path: ${{ steps.tests.outputs.artifactsPath }}
