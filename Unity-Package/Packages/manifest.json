@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "com.unity.test-framework": "1.1.33",
+    "extensions.unity.gyroscope.manager": "1.2.6"
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "extensions.unity.gyroscope.manager"
+      ]
+    }
+  ]
+}

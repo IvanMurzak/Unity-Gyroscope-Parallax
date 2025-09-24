@@ -1,0 +1,40 @@
+{
+  "name": "extensions.unity.gyroscope.parallax",
+  "displayName": "Unity Gyroscope Parallax",
+  "author": {
+    "name": "Ivan Murzak",
+    "email": "ivan.d.murzak@gmail.com",
+    "url": "https://github.com/IvanMurzak"
+  },
+  "version": "1.4.1",
+  "unity": "2019.2",
+  "description": "A Unity plugin that enables parallax effects based on device gyroscope data. It allows you to create dynamic and immersive experiences by moving UI elements or game objects in response to device orientation changes. Perfect for adding depth and interactivity to your 2D and 3D projects.",
+  "keywords": [
+    "parallax",
+    "animation",
+    "movement",
+    "gyroscope",
+    "motion",
+    "sensor",
+    "device orientation",
+    "rotation",
+    "2D",
+    "3D"
+  ],
+  "homepage": "https://github.com/IvanMurzak/Unity-Gyroscope-Parallax",
+  "bugs": {
+    "url": "https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/issues"
+  },
+  "dependencies": {
+    "extensions.unity.gyroscope.manager": "1.2.6"
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "extensions.unity.gyroscope.manager"
+      ]
+    }
+  ]
+}

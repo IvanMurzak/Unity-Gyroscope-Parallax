@@ -1,0 +1,16 @@
+{
+    "name": "Extensions.Unity.Gyroscope.Parallax",
+    "rootNamespace": "",
+    "references": [
+        "Extensions.Unity.Gyroscope.Manager"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
