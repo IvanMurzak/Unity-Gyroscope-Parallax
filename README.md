@@ -36,7 +36,7 @@ Unity Parallax based on gyroscope components. Supported fake gyroscope for simul
 
 ### Option 1 - Installer
 
-- **[⬇️ Download Installer](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/releases/download/1.5.0/Gyroscope-Parallax-Installer.unitypackage)**
+- **[⬇️ Download Installer](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/releases/download/1.5.1/Gyroscope-Parallax-Installer.unitypackage)**
 - **📂 Import installer into Unity project**
   > - You may use double click on the file - Unity will open it
   > - OR: You may open Unity Editor first, then click on `Assets/Import Package/Custom Package`, then choose the file

@@ -15,7 +15,7 @@ namespace com.IvanMurzak.Unity.Gyroscope.Parallax.Installer
     public static partial class Installer
     {
         public const string PackageId = "extensions.unity.gyroscope.parallax";
-        public const string Version = "1.5.0";
+        public const string Version = "1.5.1";
 
         static Installer()
         {
