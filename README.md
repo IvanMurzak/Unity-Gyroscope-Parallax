@@ -51,10 +51,6 @@ Unity Parallax based on gyroscope components. Supported fake gyroscope for simul
 openupm add extensions.unity.gyroscope.parallax
 ```
 
-### Option 3 - Asset Store
-
-- **[▶️ Open Asset Store](https://u3d.as/3E42)**
-
 ---
 
 # Usage
