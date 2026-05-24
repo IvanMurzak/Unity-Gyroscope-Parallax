@@ -1,0 +1,19 @@
+Unity-Package/Assets/root/package.json
+  s_e30159354ab104::t_2a262ee162dc02 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "dd6f735fdf3e5fb2c0ee0fa0f23d8fba739a03be",
+  "prompts": {},
+  "sessions": {
+    "s_e30159354ab104": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f53185a5-f95d-4b3d-91af-dff62c4c25e8",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
