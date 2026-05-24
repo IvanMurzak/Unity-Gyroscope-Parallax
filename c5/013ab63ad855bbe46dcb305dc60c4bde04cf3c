@@ -1,0 +1,19 @@
+docs/openupm-signing.md
+  s_e30159354ab104::t_b1fb23e7cc7bce 1-157
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "c5013ab63ad855bbe46dcb305dc60c4bde04cf3c",
+  "prompts": {},
+  "sessions": {
+    "s_e30159354ab104": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f53185a5-f95d-4b3d-91af-dff62c4c25e8",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
