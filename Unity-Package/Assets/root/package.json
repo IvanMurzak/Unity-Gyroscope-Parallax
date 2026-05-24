@@ -26,7 +26,7 @@
     "url": "https://github.com/IvanMurzak/Unity-Gyroscope-Parallax/issues"
   },
   "dependencies": {
-    "extensions.unity.gyroscope.manager": "1.2.6"
+    "extensions.unity.gyroscope.manager": "1.2.8"
   },
   "scopedRegistries": [
     {
